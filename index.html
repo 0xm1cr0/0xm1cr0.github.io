@@ -1,42 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Muhammad Yasir Jamil | Cyber Security Student</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Yasir Jamil | Penetration Tester</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; }
-        h2 { color: #2980b9; }
-        a { color: #3498db; text-decoration: none; }
-        .contact { background: #f8f9fa; padding: 15px; border-radius: 5px; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Muhammad Yasir Jamil</h1>
-    <div class="contact">
-        📍 Rahim Yar Khan, Punjab, Pakistan<br>
-        📞 03045829730<br>
-        ✉️ yasirlodhi123786@gmail.com<br>
-        🔗 <a href="https://www.linkedin.com/in/0xm1cr">linkedin.com/in/0xm1cr</a>
-    </div>
+    <header class="header">
+        <h1>MUHAMMAD YASIR JAMIL</h1>
+        <p class="subtitle">Penetration Testing Specialist</p>
+        <div class="contact-bar">
+            <span class="contact-item">📍 Rahim Yar Khan, Pakistan</span>
+            <span class="contact-item">📞 0304-5829730</span>
+            <a href="mailto:yasirlodhi123786@gmail.com" class="contact-item">📧 yasirlodhi123786@gmail.com</a>
+            <a href="https://linkedin.com/in/0xm1cr0" class="contact-item">🔗 linkedin.com/in/0xm1cr0</a>
+            <a href="https://github.com/0xm1cr0" class="contact-item">💻 github.com/0xm1cr0</a>
+        </div>
+    </header>
 
-    <h2>Objective</h2>
-    <p>Motivated BS Cyber Security student seeking internship opportunities to apply skills in ethical hacking, penetration testing, and Red Teaming.</p>
+    <main class="main-content">
+        <section class="section">
+            <h2 class="section-title">TECHNICAL SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Offensive Security</h3>
+                    <ul class="skill-list">
+                        <li>Metasploit Framework</li>
+                        <li>Burp Suite (Repeater/Intruder)</li>
+                        <li>Nmap Scripting Engine</li>
+                        <li>Aircrack-ng (WPA2 cracking)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Network Analysis</h3>
+                    <ul class="skill-list">
+                        <li>Wireshark (PCAP analysis)</li>
+                        <li>TCPDump</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>CTF Experience</h3>
+                    <ul class="skill-list">
+                        <li>TryHackMe </li>
+                        <li>VulnHub Machines </li>
+                        <li>HTB Starting Point</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <h2>Education</h2>
-    <p><strong>BSc Cyber Security</strong> (2023-2026)<br>
-    Khwaja Fareed University of Engineering and IT</p>
+        <section class="section">
+            <h2 class="section-title">HANDS-ON LABS</h2>
+            
+            <div class="lab">
+                <h3 class="lab-title">Wireshark Forensic Challenges</h3>
+                <ul class="lab-details">
+                    <li>Analyzed CTF PCAPs to identify:
+                        <ul>
+                            <li>Port scanning activity (SYN floods)</li>
+                            <li>HTTP credential brute-forcing</li>
+                            <li>DNS tunneling attempts</li>
+                        </ul>
+                    </li>
+                    <li>Used filters: 
+                        <code>tcp.flags.syn==1</code>, 
+                        <code>http.request.method=="POST"</code>, 
+                        <code>dns.qry.name contains "exfil"</code>
+                    </li>
+                </ul>
+            </div>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>Kali Linux, Metasploit, Nmap, Burp Suite</li>
-        <li>WiFi cracking (WPA/WPA2), CTF challenges</li>
-    </ul>
+            <div class="lab">
+                <h3 class="lab-title">VulnHub Pentests</h3>
+                <ul class="lab-details">
+                    <li><strong>Metasploitable 2:</strong>
+                        <ul>
+                            <li>Exploited vsFTPd 2.3.4 backdoor</li>
+                            <li>PrivEsc via writable NFS shares</li>
+                        </ul>
+                    </li>
+                    <li><strong>Kioptrix L1:</strong>
+                        <ul>
+                            <li>SQLi to RCE via Apache mod_ssl</li>
+                            <li>Kernel exploit (Dirty COW)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    <h2>Certifications</h2>
-    <ul>
-        <li><a href="https://lms.ehunar.org/certificate/90810f4982">CEH (Hunarmand Kamyab Jawan)</a></li>
-        <li><a href="https://codered.eccouncil.org/certificate/6af044f3-2e84-4e46-ac81-67bc9749533f">Dark Web & Cryptocurrency (EC-Council)</a></li>
-    </ul>
+        <section class="section">
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="education">
+                <h3>BSc Cyber Security</h3>
+                <p class="meta">Khwaja Fareed University | 2023-2026</p>
+                <ul>
+                    <li>Coursework: Network Security, Cryptography, Ethical Hacking</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">CERTIFICATIONS</h2>
+            <ul class="cert-list">
+                <li>
+                    <strong>Certified Ethical Hacker (CEH)</strong>
+                    <span class="meta">eHunar Program | 2024</span>
+                </li>
+                <li>
+                    <strong>Dark Web & Cryptocurrency</strong>
+                    <span class="meta">EC-Council | 2024</span>
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
