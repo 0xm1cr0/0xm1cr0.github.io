@@ -1,65 +1,181 @@
-/* style.css - Modern CV Styling */
+:root {
+    --primary: #2b2d42;
+    --secondary: #ef233c;
+    --accent: #8d99ae;
+    --light: #edf2f4;
+    --dark: #1a1a2e;
+    --code-bg: #011627;
+}
+
+/* Base Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    max-width: 800px;
+    color: var(--dark);
+    background-color: white;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    color: #333;
-    background-color: #f9f9f9;
+    padding: 2rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 700;
+    margin: 0;
 }
 
 h1 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
+    font-size: 2.5rem;
+    letter-spacing: -0.05em;
+    color: var(--primary);
 }
 
 h2 {
-    color: #2980b9;
-    margin-top: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.3rem;
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
-.contact {
-    background: #e8f4fc;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin: 1rem 0 0.5rem;
 }
 
+/* Layout */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--primary);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.skill-category h3 {
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+.skill-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.skill-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+}
+
+/* Lab Sections */
+.lab {
+    background-color: var(--light);
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 3px solid var(--secondary);
+}
+
+.lab-title {
+    color: var(--primary);
+}
+
+.lab-details {
+    padding-left: 1rem;
+}
+
+.lab-details ul {
+    padding-left: 1.5rem;
+}
+
+/* Code Snippets */
+code {
+    font-family: 'Fira Code', monospace;
+    background-color: var(--code-bg);
+    color: #d6deeb;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+/* Education & Certs */
+.meta {
+    color: var(--accent);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.cert-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cert-list li {
+    margin-bottom: 1rem;
+}
+
+/* Links */
 a {
-    color: #3498db;
+    color: var(--secondary);
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 a:hover {
+    color: var(--primary);
     text-decoration: underline;
 }
 
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
+/* Responsive */
+@media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 1rem;
     }
-    .contact {
-        padding: 10px;
+    
+    .contact-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
     }
-}
-
-/* Optional: Add a subtle animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-body {
-    animation: fadeIn 0.5s ease-in;
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
