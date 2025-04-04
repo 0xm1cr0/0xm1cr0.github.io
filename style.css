@@ -1,35 +1,18 @@
-/* Add to your existing style.css */
-.header {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(239, 35, 60, 0.2); /* Subtle red line */
-}
-
-.section-title {
-    letter-spacing: 0.05em; /* Slightly tighter spacing */
-}
-
-.contact-bar {
-    gap: 1rem 2rem; /* Better mobile spacing */
-}
-
-.lab {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft depth */
-}
 :root {
     --primary: #2b2d42;
     --secondary: #ef233c;
-    --accent: #8d99ae;
-    --light: #edf2f4;
+    --accent: #6b7280;
+    --light: #f8f9fa;
     --dark: #1a1a2e;
     --code-bg: #011627;
+    --text: #333;
 }
 
 /* Base Styles */
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: var(--dark);
+    color: var(--text);
     background-color: white;
     max-width: 900px;
     margin: 0 auto;
@@ -40,12 +23,13 @@ body {
 h1, h2, h3 {
     font-weight: 700;
     margin: 0;
+    color: var(--primary);
 }
 
 h1 {
     font-size: 2.5rem;
     letter-spacing: -0.05em;
-    color: var(--primary);
+    text-align: center;
 }
 
 h2 {
@@ -59,21 +43,22 @@ h2 {
 
 h3 {
     font-size: 1.2rem;
-    color: var(--primary);
     margin: 1rem 0 0.5rem;
 }
 
 /* Layout */
 .header {
-    text-align: center;
     margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(239, 35, 60, 0.2);
 }
 
 .subtitle {
     font-size: 1.1rem;
-    color: var(--accent);
+    color: var(--secondary);
     font-weight: 500;
     margin: 0.5rem 0 1.5rem;
+    text-align: center;
 }
 
 .contact-bar {
@@ -81,14 +66,19 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.4rem;
     color: var(--primary);
+}
+
+.contact-item[href] {
+    font-weight: 600;
+    color: var(--secondary);
 }
 
 /* Skills Grid */
@@ -129,6 +119,7 @@ h3 {
     border-radius: 8px;
     margin: 1.5rem 0;
     border-left: 3px solid var(--secondary);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .lab-title {
@@ -143,21 +134,17 @@ h3 {
     padding-left: 1.5rem;
 }
 
-/* Code Snippets */
-code {
-    font-family: 'Fira Code', monospace;
-    background-color: var(--code-bg);
-    color: #d6deeb;
-    padding: 0.2rem 0.4rem;
-    border-radius: 3px;
-    font-size: 0.9rem;
+/* Education & Certs */
+.institution {
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0.3rem 0 0;
 }
 
-/* Education & Certs */
 .meta {
     color: var(--accent);
-    font-style: italic;
     font-size: 0.9rem;
+    margin: 0.2rem 0 0.5rem;
 }
 
 .cert-list {
@@ -169,11 +156,31 @@ code {
     margin-bottom: 1rem;
 }
 
+.cert-link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.cert-link:hover {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+
+/* Code Snippets */
+code {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--code-bg);
+    color: #d6deeb;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
 /* Links */
 a {
     color: var(--secondary);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: all 0.2s;
 }
 
 a:hover {
@@ -190,10 +197,14 @@ a:hover {
     .contact-bar {
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.7rem;
     }
     
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
     }
 }
