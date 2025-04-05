@@ -1,8 +1,3 @@
-
-
-
-
-
 :root {
     --primary: #2b2d42;       /* Dark blue */
     --secondary: #d10a11;     /* Bold red */
@@ -155,5 +150,49 @@ code {
     }
     h1 {
         font-size: 2rem;
+    }
+}
+
+/* Print-Specific Styles */
+@media print {
+    body {
+        max-width: 100%; /* Remove width limit for printing */
+        padding: 1rem;
+        margin: 0;
+    }
+
+    header, .main-content {
+        page-break-before: always; /* Start new page for header */
+    }
+
+    h1, .subtitle {
+        font-size: 1.5rem; /* Reduce title font size for print */
+        text-align: center;
+    }
+
+    .section {
+        page-break-inside: avoid; /* Prevent breaking content within sections */
+    }
+
+    .contact-bar, .skills-grid {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills in one column for print */
+    }
+
+    .contact-item {
+        font-size: 0.9rem;
+    }
+
+    /* Ensure no overflowing content */
+    .lab, .education, .cert-list {
+        font-size: 0.9rem;
+    }
+
+    .cert-list li {
+        margin-bottom: 0.5rem;
     }
 }
