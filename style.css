@@ -1,3 +1,6 @@
+
+
+
 :root {
     --primary: #2b2d42;       /* Dark blue */
     --secondary: #d10a11;     /* Bold red */
@@ -12,9 +15,9 @@ body {
     line-height: 1.6;
     color: var(--text);
     background-color: white;
-    max-width: 900px;
-    margin: 0 auto;
+    margin: 0;
     padding: 2rem;
+    max-width: 100%;
 }
 
 /* Typography */
@@ -135,6 +138,17 @@ code {
     font-size: 0.9rem;
 }
 
+/* Print Styles */
+@media print {
+    body {
+        padding: 1rem;
+        margin: 0;
+    }
+    .header, .footer {
+        display: none;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     body {
@@ -152,3 +166,5 @@ code {
         font-size: 2rem;
     }
 }
+
+
