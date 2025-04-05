@@ -1,6 +1,3 @@
-
-
-
 :root {
     --primary: #2b2d42;       /* Dark blue */
     --secondary: #d10a11;     /* Bold red */
@@ -166,5 +163,3 @@ code {
         font-size: 2rem;
     }
 }
-
-
