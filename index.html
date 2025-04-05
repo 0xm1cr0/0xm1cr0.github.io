@@ -102,6 +102,15 @@
             </ul>
         </section>
     </main>
+
+    <footer>
+        <button id="download-btn">Download PDF</button>
+    </footer>
+
+    <script>
+        document.getElementById('download-btn').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
 </body>
 </html>
-
