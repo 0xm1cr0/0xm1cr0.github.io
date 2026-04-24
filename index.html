@@ -1,106 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Yasir Jamil | Penetration Tester</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Cybersecurity student with hands-on pentesting lab experience and 6-week enterprise internship. Skilled in Metasploit, Burp Suite, and Nmap.">
+    <title>Muhammad Yasir Jamil - Penetration Tester CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #b91c1c;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --bg-paper: #ffffff;
+            --border: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resume-container {
+            width: 100%;
+            max-width: 21cm;
+            background-color: var(--bg-paper);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-radius: 8px;
+            padding: 3rem 3.5rem;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.75rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1.5rem;
+        }
+
+        .header-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid #cbd5e1;
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem 1.5rem;
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.25rem;
+        }
+
+        .summary {
+            font-size: 0.95rem;
+            text-align: justify;
+            color: var(--text-main);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .item {
+            margin-bottom: 1.25rem;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.2rem;
+        }
+
+        .item-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        .item-date {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .item-subtitle {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-list {
+            padding-left: 1.25rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .item-list li {
+            margin-bottom: 0.35rem;
+            padding-left: 0.25rem;
+        }
+
+        .item-list li::marker {
+            color: var(--accent);
+            font-size: 1.2em;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .skill-row {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .skill-category {
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 0.25rem;
+        }
+
+        .ed-cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .cert-link {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--border);
+            transition: all 0.2s;
+        }
+
+        .cert-link:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        @media print {
+            @page {
+                margin: 0;
+            }
+
+            body {
+                background-color: white;
+                padding: 1.5cm;
+                display: block;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+                border-radius: 0;
+            }
+
+            .section {
+                margin-bottom: 1.25rem;
+            }
+
+            header {
+                padding-bottom: 1rem;
+                margin-bottom: 1.25rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <header class="header">
-        <h1>MUHAMMAD YASIR JAMIL</h1>
-        <p class="subtitle">Penetration Testing </p>
-        <div class="contact-bar">
-            <span class="contact-item">📍 Rahim Yar Khan, Pakistan</span>
-            <span class="contact-item">📞 0304-5829730</span>
-            <a href="mailto:yasirlodhi123786@gmail.com" class="contact-item">📧 yasirlodhi123786@gmail.com</a>
-            <a href="https://linkedin.com/in/0xm1cr0" class="contact-item">👔 LinkedIn</a>
-            <a href="https://github.com/0xm1cr0" class="contact-item">💻 GitHub</a>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <section class="section">
-            <h2 class="section-title">TECHNICAL SKILLS</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Offensive Security</h3>
-                    <ul class="skill-list">
-                        <li>Metasploit Framework</li>
-                        <li>Burp Suite Professional</li>
-                        <li>Nmap Scripting Engine</li>
-                        <li>Aircrack-ng</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Network Analysis</h3>
-                    <ul class="skill-list">
-                        <li>Wireshark (PCAP Analysis)</li>
-                        <li>TCPDump</li>
-                        <li>Zeek (Bro) IDS</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>CTF Achievements</h3>
-                    <ul class="skill-list">
-                        <li>TryHackMe </li>
-                        <li>5+ VulnHub Machines Rooted</li>
-                        <li>HackTheBox Starting Point</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">HANDS-ON EXPERIENCE</h2>
+    <div class="resume-container">
+        <header>
             
-            <div class="lab">
-                <h3 class="lab-title">Wireshark Network Forensics</h3>
-                <ul class="lab-details">
-                    <li>Analyzed PCAPs from TryHackMe and VulnHub</li>
-                    <li>Detected malicious traffic (SYN scans, brute-force attempts)</li>
-                    <li>Extracted files from HTTP streams using <code>export objects</code></li>
+            <div class="header-text">
+                <h1>Muhammad Yasir Jamil</h1>
+                <div class="title">Cybersecurity Student | Penetration Tester</div>
+                <div class="contact-info">
+                    <span>Rahim Yar Khan, PK</span>
+                    <span>0304-5829730</span>
+                    <a href="mailto:yasirlodhi123786@gmail.com" target="_blank"
+                        rel="noopener noreferrer">yasirlodhi123786@gmail.com</a>
+                    <a href="https://linkedin.com/in/0xm1cr0" target="_blank"
+                        rel="noopener noreferrer">linkedin.com/in/0xm1cr0</a>
+                    <a href="https://github.com/0xm1cr0" target="_blank"
+                        rel="noopener noreferrer">github.com/0xm1cr0</a>
+                </div>
+            </div>
+        </header>
+        <section class="section">
+            <h2>Professional Summary</h2>
+            <p class="summary">
+                Final-year Cybersecurity student graduating in August 2026. Completed a 6-week IT infrastructure
+                internship at English Biscuit Manufacturers (EBM), gaining insight into enterprise network defenses for
+                500+ users. Operated a dedicated penetration testing lab since May 2024 to execute attack lifecycles on
+                isolated networks. Rooted multiple VulnHub machines and documented technical findings to formulate
+                actionable remediation strategies.
+            </p>
+        </section>
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-row"><span class="skill-category">Offensive Security:</span> Metasploit Framework,
+                    Burp Suite Professional, Nmap, Privilege Escalation</div>
+                <div class="skill-row"><span class="skill-category">Network Analysis:</span> Wireshark (PCAP Analysis),
+                    TCPDump, Zeek (Bro) IDS, Network Traffic Analysis</div>
+                <div class="skill-row"><span class="skill-category">Defense Knowledge:</span> Sangfor CyberCommand EDR,
+                    NGAF, Wazuh SIEM, Active Directory Security</div>
+                <div class="skill-row"><span class="skill-category">OS & Platforms:</span> Kali Linux, Windows Server,
+                    Linux (Ubuntu/CentOS), Windows 10/11</div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Projects & Labs</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Penetration Testing & Exploit Lab</div>
+                    <div class="item-date">May 2024 – Present</div>
+                </div>
+                <ul class="item-list">
+                    <li>Engineered intentionally vulnerable networks featuring misconfigured Windows Server and Linux
+                        VMs for offensive practice.</li>
+                    <li>Executed end-to-end attack lifecycles encompassing reconnaissance, exploitation, and lateral
+                        movement utilizing Kali Linux.</li>
+                    <li>Documented technical findings and formulated remediation steps following the Penetration Testing
+                        Execution Standard (PTES).</li>
                 </ul>
             </div>
-
-            <div class="lab">
-                <h3 class="lab-title">VulnHub Pentests</h3>
-                <ul class="lab-details">
-                    <li><strong>Metasploitable 2:</strong> Exploited vsFTPd 2.3.4 (CVE-2011-2523)</li>
-                    <li><strong>Kioptrix L1:</strong> Privilege escalation via Dirty COW (CVE-2016-5195)</li>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">VulnHub & Capture The Flag (CTF) Challenges</div>
+                    <div class="item-date">Continuous</div>
+                </div>
+                <ul class="item-list">
+                    <li>Exploited vsFTPd 2.3.4 (CVE-2011-2523) on the Metasploitable 2 instance to gain initial access.
+                    </li>
+                    <li>Attained privilege escalation on Kioptrix L1 through kernel exploit mapping (Dirty COW -
+                        CVE-2016-5195).</li>
+                    <li>Analyzed PCAPs from TryHackMe to detect malicious traffic and extract payloads directly from
+                        HTTP streams.</li>
                 </ul>
             </div>
         </section>
-
         <section class="section">
-            <h2 class="section-title">EDUCATION</h2>
-            <div class="education">
-                <h3>BSc Cyber Security</h3>
-                <p class="institution">Khwaja Fareed University of Engineering and IT</p>
-                <p class="date">2023 - 2026</p>
+            <h2>Professional Experience</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">IT Infrastructure Intern</div>
+                    <div class="item-date">Jul 2025 – Aug 2025</div>
+                </div>
+                <div class="item-subtitle">English Biscuit Manufacturers (EBM) | Karachi, PK</div>
+                <ul class="item-list">
+                    <li>Monitored infrastructure and endpoints for 500+ active users to understand enterprise network
+                        topologies.</li>
+                    <li>Evaluated Next-Generation Firewall (NGAF) and IAG policies to map defensive mechanisms.</li>
+                    <li>Reviewed configurations for EDR and SIEM solutions to gain insight into how offensive attacks
+                        are detected and logged.</li>
+                </ul>
             </div>
         </section>
-
-        <section class="section">
-            <h2 class="section-title">CERTIFICATIONS</h2>
-            <ul class="cert-list">
-                <li>
-                    <a href="https://lms.ehunar.org/certificate/90810f4982" target="_blank" class="cert-link">
-                        <strong>Certified Ethical Hacker (CEH)</strong>
-                    </a>
-                    <p class="cert-meta">eHunar Program | September 2024 | ID: 90810f4982</p>
-                </li>
-                <li>
-                    <a href="https://codered.eccouncil.org/certificate/6af044f3-2e84-4e46-ac81-67bc9749533f" target="_blank" class="cert-link">
-                        <strong>Dark Web & Cryptocurrency</strong>
-                    </a>
-                    <p class="cert-meta">EC-Council | May 2024 | ID: 6af044f3-2e84-4e46-ac81-67bc9749533f</p>
-                </li>
-            </ul>
+        <section class="section" style="margin-bottom: 0;">
+            <div class="ed-cert-grid">
+                <div>
+                    <h2>Education</h2>
+                    <div class="item" style="margin-bottom: 0;">
+                        <div class="item-title">BS Cybersecurity</div>
+                        <div class="item-subtitle" style="margin-bottom: 0.25rem;">Khawaja Fareed UEIT, Rahim Yar Khan
+                        </div>
+                        <div class="item-date" style="margin-bottom: 0.25rem;">Sep 2022 – Aug 2026</div>
+                        <p class="skill-row" style="color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">
+                            Currently in 8th Semester (Final Year)</p>
+                    </div>
+                </div>
+                <div>
+                    <h2>Certifications</h2>
+                    <div class="item" style="margin-bottom: 0.75rem;">
+                        <div class="item-title">
+                            <a href="https://lms.ehunar.org/certificate/90810f4982" target="_blank"
+                                rel="noopener noreferrer" class="cert-link">Certified Ethical Hacker (CEH)</a>
+                        </div>
+                        <div class="item-subtitle" style="margin-bottom: 0.15rem;">eHunar (HEC & PHEC)</div>
+                        <div class="item-date">Sep 2024</div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </main>
+    </div>
 </body>
+
 </html>
