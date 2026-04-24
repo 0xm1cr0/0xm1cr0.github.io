@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Final-year Cybersecurity student with 6-week enterprise IT internship experience. Skilled in SIEM monitoring, EDR deployment, and SOC lab creation.">
+    <title>Muhammad Yasir Jamil - SOC Analyst CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #0369a1; 
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --bg-paper: #ffffff;
+            --border: #cbd5e1;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .resume-container {
+            width: 100%;
+            max-width: 21cm;
+            background-color: var(--bg-paper);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-radius: 8px;
+            padding: 3rem 3.5rem;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.75rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1.5rem;
+        }
+        .header-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid #cbd5e1;
+            flex-shrink: 0;
+        }
+        .header-text {
+            flex: 1;
+            text-align: center;
+        }
+        h1 { font-size: 2.5rem; font-weight: 700; color: var(--primary); line-height: 1.1; letter-spacing: -0.03em; text-transform: uppercase; }
+        .title { font-size: 1.2rem; font-weight: 600; color: var(--accent); margin-top: 0.5rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .contact-info {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 1.5rem; font-size: 0.95rem; color: var(--primary); font-weight: 600;
+        }
+        .contact-info a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+        .contact-info a:hover { color: var(--accent); text-decoration: underline; }
+        .section { margin-bottom: 1.5rem; }
+        h2 {
+            font-size: 1.15rem; font-weight: 700; color: var(--primary); text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem;
+        }
+        .summary { font-size: 0.95rem; text-align: justify; color: var(--text-main); font-weight: 400; line-height: 1.6; }
+        .item { margin-bottom: 1.25rem; }
+        .item:last-child { margin-bottom: 0; }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem; }
+        .item-title { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
+        .item-date { font-size: 0.9rem; color: var(--primary); font-weight: 600; }
+        .item-subtitle { font-size: 0.95rem; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
+        .item-list { padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-main); line-height: 1.6; }
+        .item-list li { margin-bottom: 0.35rem; padding-left: 0.25rem; }
+        .item-list li::marker { color: var(--accent); font-size: 1.2em; }
+        .skills-grid { display: flex; flex-direction: column; gap: 0.5rem; }
+        .skill-row { font-size: 0.95rem; line-height: 1.5; }
+        .skill-category { font-weight: 700; color: var(--primary); margin-right: 0.25rem; }
+        .ed-cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .cert-link { color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--border); transition: all 0.2s; }
+        .cert-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+        @media print {
+            @page { margin: 0; }
+            body { background-color: white; padding: 1.5cm; display: block; }
+            .resume-container { box-shadow: none; padding: 0; max-width: 100%; border-radius: 0; }
+            .section { margin-bottom: 1.25rem; }
+            header { padding-bottom: 1rem; margin-bottom: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            
+            <div class="header-text">
+                <h1>Muhammad Yasir Jamil</h1>
+                <div class="title">Cybersecurity Student | SOC Analyst</div>
+                <div class="contact-info">
+                    <span>Rahim Yar Khan, PK</span>
+                    <span>0304-5829730</span>
+                    <a href="mailto:yasirlodhi123786@gmail.com" target="_blank" rel="noopener noreferrer">yasirlodhi123786@gmail.com</a>
+                    <a href="https://linkedin.com/in/0xm1cr0" target="_blank" rel="noopener noreferrer">linkedin.com/in/0xm1cr0</a>
+                    <a href="https://github.com/0xm1cr0" target="_blank" rel="noopener noreferrer">github.com/0xm1cr0</a>
+                </div>
+            </div>
+        </header>
+        <section class="section">
+            <h2>Professional Summary</h2>
+            <p class="summary">
+                Final-year Cybersecurity student graduating in August 2026. Completed a 6-week IT infrastructure internship at English Biscuit Manufacturers (EBM), managing networks for 500+ users. Experienced in deploying and managing Wazuh SIEM, Sangfor CyberCommand EDR, NGAF, and IAG in enterprise environments. Built and maintained a multi-VM home SOC lab since October 2024 to practice daily alert monitoring and log analysis.
+            </p>
+        </section>
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-row"><span class="skill-category">Security Tools:</span> Wazuh SIEM, Sangfor CyberCommand EDR, NGAF, IAG, pfSense</div>
+                <div class="skill-row"><span class="skill-category">Monitoring & Response:</span> Alert Triage, Threat Detection, Log Analysis, Incident Investigation</div>
+                <div class="skill-row"><span class="skill-category">Network Security:</span> Firewall Configuration, Network Segmentation, IDS/IPS, VPN Management</div>
+                <div class="skill-row"><span class="skill-category">OS & Platforms:</span> Windows Server, Linux (Ubuntu/CentOS), Active Directory, Windows 10/11</div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Professional Experience</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">IT Infrastructure Intern</div>
+                    <div class="item-date">Jul 2025 – Aug 2025</div>
+                </div>
+                <div class="item-subtitle">English Biscuit Manufacturers (EBM) | Karachi, PK</div>
+                <ul class="item-list">
+                    <li>Monitored IT infrastructure and endpoint security for 500+ users across multiple production facilities.</li>
+                    <li>Deployed Sangfor CyberCommand EDR for real-time endpoint threat detection and rapid response.</li>
+                    <li>Configured network segmentation and secure internet access policies utilizing NGAF and IAG.</li>
+                    <li>Analyzed daily security alerts via Wazuh SIEM to triage potential threats and investigate anomalies.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Home SOC Lab Architecture (Wazuh SIEM)</div>
+                    <div class="item-date">Oct 2024 – Present</div>
+                </div>
+                <ul class="item-list">
+                    <li>Built a multi-VM SOC environment to simulate enterprise network logging and continuous monitoring.</li>
+                    <li>Wrote custom detection rules mapped to the MITRE ATT&CK framework to identify brute-force attempts.</li>
+                    <li>Investigated simulated malware executions and documented incident response procedures.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Continuous Learning</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">TryHackMe – SOC & Defensive Security Tracks</div>
+                    <div class="item-date">Continuous</div>
+                </div>
+                <ul class="item-list">
+                    <li>Completed scenario-based modules on Security Operations, Log Analysis, and Incident Handling.</li>
+                    <li>Practiced analyzing malicious traffic patterns and identifying persistent indicators of compromise (IoCs).</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section" style="margin-bottom: 0;">
+            <div class="ed-cert-grid">
+                <div>
+                    <h2>Education</h2>
+                    <div class="item" style="margin-bottom: 0;">
+                        <div class="item-title">BS Cybersecurity</div>
+                        <div class="item-subtitle" style="margin-bottom: 0.25rem;">Khawaja Fareed UEIT, Rahim Yar Khan</div>
+                        <div class="item-date" style="margin-bottom: 0.25rem;">Sep 2022 – Aug 2026</div>
+                        <p class="skill-row" style="color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">Currently in 8th Semester (Final Year)</p>
+                    </div>
+                </div>
+                <div>
+                    <h2>Certifications</h2>
+                    <div class="item" style="margin-bottom: 0;">
+                        <div class="item-title">
+                            <a href="https://lms.ehunar.org/certificate/90810f4982" target="_blank" rel="noopener noreferrer" class="cert-link">Certified Ethical Hacker (CEH)</a>
+                        </div>
+                        <div class="item-subtitle" style="margin-bottom: 0.25rem;">eHunar (HEC & PHEC)</div>
+                        <div class="item-date">Sep 2024</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
